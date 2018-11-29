@@ -5,11 +5,20 @@
   </h1>
 </div>
   <br>
-<ul *ngIf="Data">
-  <li *ngFor="let item of Data.results">
-    <h2>{{item.title}}</h2>
-    <p><small> - {{item.writer}}</small></p>
-  </li>
+<div *ngIf="Data">
+
+    <div class="card" *ngFor="let item of Data.results">
+        <div class="card-body">
+            <button type="button" class="btn btn-link">
+                <h3>{{item.title}}</h3>
+              </button>
+              <p><small> - {{item.writer}}</small></p>
+        </div>
+      </div>
+
  
-</ul>
+</div>
+
+
+
 
